@@ -14,6 +14,7 @@ import FacilityLogin from './components/Facility/FacilityLogin/FacilityLogin'
 import FacilityDashboard from './components/Facility/FacilityDashboard/FacilityDashboard'
 import JobPosting from './components/Job/JobPosting/JobPosting'
 import JobDetails from './components/Job/JobDetails/JobDetails'
+import JobCreate from './components/Job/JobCreate/JobCreate'
 
 const Stack = createNativeStackNavigator()
 
@@ -122,6 +123,18 @@ export default function App() {
             <Stack.Screen
               name="Job Details"
               component={JobDetails}
+              options={{
+                headerStyle: {
+                  backgroundColor: '#000',
+                },
+                headerTitleStyle: {
+                  color: '#000',
+                },
+              }}
+            />
+            <Stack.Screen
+              name="Job Create"
+              component={JobCreate}
               options={{
                 headerStyle: {
                   backgroundColor: '#000',

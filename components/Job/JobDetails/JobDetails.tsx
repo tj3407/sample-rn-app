@@ -1,8 +1,8 @@
 import React from 'react'
 import { ScrollView, StyleSheet } from 'react-native'
-import { Text } from 'react-native-elements'
+import { Button, Text } from 'react-native-elements'
 
-function JobDetails({ route }) {
+function JobDetails({ route, navigation }) {
   const { job } = route.params
   return (
     <ScrollView style={styles.container}>
@@ -13,6 +13,12 @@ function JobDetails({ route }) {
           currency: 'USD',
         })}
       </Text>
+      <Button
+        title="Book"
+        type="solid"
+        onPress={() => navigation.navigate('Nurse Login')}
+        // onPress={() => navigation.reset({ index: 0, routes: [{ name: 'Dashboard' }] })}
+      />
     </ScrollView>
   )
 }
