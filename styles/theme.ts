@@ -9,7 +9,7 @@ export const theme = {
   },
   Text: {
     style: {
-      marginBottom: 40,
+      marginBottom: 10,
       color: 'gray',
     },
   },

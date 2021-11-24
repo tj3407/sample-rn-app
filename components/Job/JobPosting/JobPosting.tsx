@@ -113,10 +113,12 @@ function JobPosting({ navigation }) {
               <ListItem.Subtitle>{`Shift: ${moment(
                 job.shift.start.toString(),
                 'LT'
-              )} - ${moment(
+              ).format('HH:mm')} - ${moment(
                 (job.shift.start + job.shift.duration).toString(),
                 'LT'
-              )} (${job.shift.duration} hrs)`}</ListItem.Subtitle>
+              ).format('HH:mm')} (${
+                job.shift.duration
+              } hrs)`}</ListItem.Subtitle>
               <ListItem.Subtitle>{`ID: ${job.id}`}</ListItem.Subtitle>
             </ListItem.Content>
           </TouchableOpacity>

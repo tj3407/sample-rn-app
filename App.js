@@ -23,7 +23,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <SafeAreaProvider>
         <NavigationContainer>
-          <Stack.Navigator>
+          <Stack.Navigator screenOptions={{ headerBackTitleVisible: false }}>
             <Stack.Screen
               name="InitialSelection"
               component={InitialSelection}
